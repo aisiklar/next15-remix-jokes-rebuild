@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getRandomJoke } from '@/data/services/getRandomJoke';
 
 export default async function JokesPage() {
+  console.log('remount jokes page');
   const randomJoke = await getRandomJoke();
 
   if (!randomJoke) {
