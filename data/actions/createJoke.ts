@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation';
 import { prisma } from '@/db';
 
 export async function createJoke(formData: FormData) {
+  console.log('formData: ', formData)
   const joke = await prisma.joke.create({
     data: {
       content: formData.get('content') as string,
