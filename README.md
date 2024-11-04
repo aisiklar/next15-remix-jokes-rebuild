@@ -1,3 +1,22 @@
+# notes on forked project
+
+This is a forked project from Aurora Scharff (https://github.com/aurorascharff/next15-remix-jokes-rebuild)
+
+I used this project and the codebase to study some features of next.js and react, like, server actions, some hooks, react server components and other techs like prisma etc.
+
+Since the creation of this project by Aurora, Next.js version is changed from canary to stable (15.0.2).
+Therefore, in this forked edition I also upgraded it.
+
+Additionally,
+- I added an excalidraw drawing. I am a big fan of drawing the render tree of my projects and the business logic, like functions, states etc. In this project, I also created a drawing, so that, it would be easier for me to understand the code now and also remember it quickly when I re-visit the project after some time. Also, I hope that it could be useful for a random person who wants to study the codebase, like me...
+- Nothing critical is added to the project codebase. Just avoided some warnings that has been added with the new stable version (check https://nextjs.org/docs/messages/sync-dynamic-apis)
+- I also added some console.logs etc, to understand the code better... 
+
+
+
+
+here is the original notes:
+
 # Next.js 15 "Remix Jokes" Rebuild
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

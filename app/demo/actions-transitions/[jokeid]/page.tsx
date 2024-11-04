@@ -12,7 +12,9 @@ type PageProps = {
 };
 
 export default async function ActionsTransitionsJokePage({ params }: PageProps) {
-  const joke = await getJoke(params.jokeid);
+  const { jokeid } = await params;
+  console.log('jokeid: ', jokeid);
+  const joke = await getJoke(jokeid);
 
   return <UpdateJokeForm joke={joke} />;
 }

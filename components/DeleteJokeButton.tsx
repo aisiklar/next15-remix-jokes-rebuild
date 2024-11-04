@@ -6,6 +6,7 @@ import { deleteJoke } from '@/data/actions/deleteJoke';
 
 export default function DeleteJokeButton({ jokeid }: { jokeid: string }) {
   const [isPending, startTransition] = useTransition();
+  console.log('isPending: ', isPending);
 
   return (
     <Button

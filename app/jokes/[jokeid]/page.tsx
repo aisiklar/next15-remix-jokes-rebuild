@@ -9,7 +9,8 @@ type PageProps = {
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const joke = await getJoke(params.jokeid);
+  const { jokeid } = await params;
+  const joke = await getJoke(jokeid);
 
   return joke
     ? {
@@ -20,8 +21,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function JokePage({ params }: PageProps) {
-  const joke = await getJoke(params.jokeid);
+  const { jokeid } = await params; //to avoid warnings
+  const joke = await getJoke(jokeid);
 
+  console.log('in [jokeid] page/router, jokeid: ', jokeid);
+  
   return (
     <div className="flex flex-col gap-y-4">
       <p>Heres your hilarious joke:</p>
